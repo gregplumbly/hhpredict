@@ -9,9 +9,13 @@ describe("My Dapp", function () {
 
   beforeEach(async () => {
     // Deploy ExampleExternalContract contract
+    // const [owner] = await ethers.getSigners();
+    // console.log(await owner.address);
 
     const YourContract = await ethers.getContractFactory("YourContract");
     myContract = await YourContract.deploy();
+
+    await myContract.createFixture("QPREVE", 222222222);
   });
 
   describe("Balance", () => {
@@ -23,9 +27,8 @@ describe("My Dapp", function () {
 
   describe("Fixtures", () => {
     it("create a fixture", async () => {
-      // const [owner] = await ethers.getSigners();
-      const fixture = await myContract.createFixture("QPREVE", 222222222);
-      console.log(await fixture);
+      await myContract.createFixture("LIVCHE", 1633095577);
+      expect(await myContract.getMatchCount().toString()).to.equal("1");
     });
   });
 });

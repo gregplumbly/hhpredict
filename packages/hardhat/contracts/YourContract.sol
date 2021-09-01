@@ -136,5 +136,9 @@ contract YourContract is Ownable {
 
         // Emit a withdraw winning event anytime a player withdraws. UI code will listen to this and take any action as needed
         emit WithdrawWinnings(msg.sender);
-    }    
+    }
+
+    function getMatchCount() public view returns(uint count) {
+        return fixtureIds.length;
+    } 
 }

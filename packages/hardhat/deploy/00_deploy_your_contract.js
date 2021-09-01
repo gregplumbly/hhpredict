@@ -12,10 +12,10 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
     log: true,
   });
 
-  const YourContract = await ethers.getContract("YourContract", deployer);
-  await YourContract.transferOwnership(
-    "0x851a5b5855efcca35b3ffc20514415c49abbb2a0"
-  );
+  // const YourContract = await ethers.getContract("YourContract", deployer);
+  // await YourContract.transferOwnership(
+  //   "0x851a5b5855efcca35b3ffc20514415c49abbb2a0"
+  // );
 
   //const yourContract = await ethers.getContractAt('YourContract', "0xaAC799eC2d00C013f1F11c37E654e59B0429DF6A") //<-- if you want to instantiate a version of a contract at a specific address!
 
