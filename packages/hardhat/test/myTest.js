@@ -26,12 +26,10 @@ describe("Football prediction", function () {
   describe("Fixtures", () => {
     it("create a fixture", async () => {
       const setcreateFixtureTx = await myContract.createFixture(
-        "QPREVE",
+        "LIVCHE",
         1633097459
       );
-      await setcreateFixtureTx.wait();
-
-      expect(await myContract.getMatchCount().toString()).to.equal("1");
+      expect((await myContract.getMatchCount()).toString()).to.equal("1");
     });
   });
 });
