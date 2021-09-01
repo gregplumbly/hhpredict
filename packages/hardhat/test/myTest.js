@@ -4,7 +4,7 @@ const { solidity } = require("ethereum-waffle");
 
 use(solidity);
 
-describe("My Dapp", function () {
+describe("Football prediction", function () {
   let myContract;
 
   beforeEach(async () => {
@@ -14,12 +14,10 @@ describe("My Dapp", function () {
 
     const YourContract = await ethers.getContractFactory("YourContract");
     myContract = await YourContract.deploy();
-
-    await myContract.createFixture("QPREVE", 222222222);
   });
 
   describe("Balance", () => {
-    it("the balance of the pot should be zero", async () => {
+    it("the initial balance of the pot should be zero", async () => {
       const pot = await myContract.balanceOfPot();
       expect(await pot).to.equal(0);
     });
@@ -27,7 +25,12 @@ describe("My Dapp", function () {
 
   describe("Fixtures", () => {
     it("create a fixture", async () => {
-      await myContract.createFixture("LIVCHE", 1633095577);
+      const setcreateFixtureTx = await myContract.createFixture(
+        "QPREVE",
+        1633097459
+      );
+      await setcreateFixtureTx.wait();
+
       expect(await myContract.getMatchCount().toString()).to.equal("1");
     });
   });

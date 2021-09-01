@@ -175,8 +175,8 @@
       ]
     },
     "/Users/gregplumbly/Dev/bootcamp/hhpredictr/packages/hardhat/contracts/YourContract.sol": {
-      "lastModificationDate": 1630506290675,
-      "contentHash": "d303298016ac2e6c791412eac8ce3450",
+      "lastModificationDate": 1630508128638,
+      "contentHash": "7103538fa8b0bc44785012f9ece384af",
       "sourceName": "contracts/YourContract.sol",
       "solcConfig": {
         "version": "0.6.7",

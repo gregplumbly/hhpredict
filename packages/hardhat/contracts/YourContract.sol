@@ -139,6 +139,7 @@ contract YourContract is Ownable {
     }
 
     function getMatchCount() public view returns(uint count) {
+        console.log('counting the fixtures');
         return fixtureIds.length;
     } 
 }
